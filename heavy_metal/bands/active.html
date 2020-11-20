@@ -1,0 +1,16 @@
+---
+layout: page
+title: Active bands
+---
+
+{% assign active_bands = site.data.bands | where: 'split','-' %} 
+
+{% for band in active_bands %}
+
+<ul>
+    <li>{{ band.band_name }}</li>
+    Establish: {{band.origin}} {{ band.formed}}<br>
+    Followers: {{ band.fans }}<br>
+    Style: {{ band.style }}
+</ul>
+{% endfor %}
