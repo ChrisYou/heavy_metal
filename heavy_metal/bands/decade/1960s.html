@@ -1,0 +1,16 @@
+---
+layout: page
+title: Decade-1960s
+---
+
+{% for band in site.data.bands %}
+{% assign formed = band.formed | plus: 0 %}
+ {% if formed >= 1960 and formed < 1970 %}
+<ul>
+    <li>{{ band.band_name }}</li>
+    Establish: {{band.origin}} {{ band.formed}}-{{ band.split | replace:'-','never split'}}<br>
+    Followers: {{ band.fans }}<br>
+    Style: {{ band.style }}
+</ul>
+ {% endif %}
+{% endfor %}

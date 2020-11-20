@@ -1,0 +1,17 @@
+---
+layout: page
+title: Not-Active bands
+---
+
+{% for band in site.data.bands %}
+
+ {% if band.split != '-' %} 
+   <ul>
+     <li>{{ band.band_name }}</li>
+     Establish: {{band.origin}} {{band.formed}}-{{ band.split }}<br>
+     Followers: {{ band.fans }}<br>
+     Style: {{ band.style }}
+   </ul>
+ {% endif %}
+
+{% endfor %}

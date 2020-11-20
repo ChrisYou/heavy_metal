@@ -1,0 +1,14 @@
+---
+layout: page
+title: All the bands
+---
+
+{% for band in site.data.bands %}
+
+<ul>
+    <li>{{ band.band_name }}</li>
+    Establish: {{band.origin}} {{ band.formed}}-{{ band.split | replace:'-','never split'}}<br>
+    Followers: {{ band.fans }}<br>
+    Style: {{ band.style }}
+</ul>
+{% endfor %}

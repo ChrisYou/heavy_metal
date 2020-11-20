@@ -1,0 +1,15 @@
+---
+layout: page
+title: Style-Doom
+---
+
+{% for band in site.data.bands %}
+ {% if band.style contains 'doom' %}
+<ul>
+    <li>{{ band.band_name }}</li>
+    Establish: {{band.origin}} {{ band.formed}}-{{ band.split | replace:'-','never split'}}<br>
+    Followers: {{ band.fans }}<br>
+    Style: {{ band.style }}
+</ul>
+ {% endif %}
+{% endfor %}

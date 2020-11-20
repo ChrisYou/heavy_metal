@@ -1,0 +1,16 @@
+---
+layout: page
+title: Popular bands
+---
+
+{% for band in site.data.bands %}
+  {% assign fans = band.fans | plus: 0 %}
+  {% if fans >= 1000 %}
+<ul>
+    <li>{{ band.band_name }}</li>
+    Establish: {{band.origin}} {{ band.formed}}-{{ band.split | replace:'-','never split'}}<br>
+    Followers: {{ band.fans }}<br>
+    Style: {{ band.style }}
+</ul>
+  {% endif %}
+{% endfor %}
